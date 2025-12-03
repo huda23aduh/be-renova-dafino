@@ -1,0 +1,31 @@
+# ---------------------------------------
+# Node / Express / Backend
+# ---------------------------------------
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+package-lock.json
+pnpm-lock.yaml
+
+# Logs
+logs/
+*.log
+*.tmp
+*.temp
+*.pid
+*.seed
+*.pid.lock
+
+# Environment files
+.env
+.env.*           # for .env.development, .env.production, etc.
+.env.local
+.env.test
+
+# Build output (Express compiled or dist)
+dist/
+build/
+tmp/
+temp/
