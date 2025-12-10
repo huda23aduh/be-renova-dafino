@@ -1,5 +1,5 @@
 import express from "express";
-import { auth } from "../middlewares/auth.middleware.js";
+// import { auth } from "../middlewares/auth.middleware.js";
 import {
   createBrand,
   listBrands,
@@ -8,8 +8,8 @@ import {
 
 const router = express.Router();
 
-router.post("/", auth, createBrand);
-router.get("/", auth, listBrands);
-router.delete("/:id", auth, deleteBrand);
+router.post("/", createBrand);
+router.get("/", listBrands);
+router.delete("/:id", deleteBrand);
 
 export default router;
