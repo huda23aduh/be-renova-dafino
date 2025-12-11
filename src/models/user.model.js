@@ -9,17 +9,33 @@ const User = sequelize.define(
       defaultValue: DataTypes.UUIDV4,
       primaryKey: true
     },
-    name: DataTypes.STRING,
+    name: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
     phone: DataTypes.STRING,
-    isActive: DataTypes.BOOLEAN,
+    isActive: {
+      type: DataTypes.BOOLEAN,
+      defaultValue: true
+    },
     email: {
       type: DataTypes.STRING,
-      unique: true
+      allowNull: false,
+      unique: true,
+      validate: {
+        isEmail: true
+      }
     },
-    password: DataTypes.STRING
+    password: {
+      type: DataTypes.STRING,
+      allowNull: false
+    }
   },
   {
-    tableName: "users"
+    tableName: "users",
+    timestamps: true, // This will automatically add createdAt and updatedAt
+    createdAt: 'createdAt',
+    updatedAt: 'updatedAt'
   }
 );
 
