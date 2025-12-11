@@ -11,6 +11,12 @@ module.exports = {
       name: {
         type: Sequelize.STRING,
       },
+      phone: {
+        type: Sequelize.STRING,
+      },
+      isActive: {
+        type: Sequelize.BOOLEAN,
+      },
       email: {
         type: Sequelize.STRING,
         unique: true,

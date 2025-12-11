@@ -1,4 +1,5 @@
-// Copy your entire carsData array here
+"use strict";
+
 const carsData = [
   {
     id: 1,
@@ -1058,3 +1059,5 @@ const carsData = [
     views: 330
   }
 ];
+
+module.exports = { carsData };

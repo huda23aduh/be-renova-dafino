@@ -10,6 +10,8 @@ const User = sequelize.define(
       primaryKey: true
     },
     name: DataTypes.STRING,
+    phone: DataTypes.STRING,
+    isActive: DataTypes.BOOLEAN,
     email: {
       type: DataTypes.STRING,
       unique: true

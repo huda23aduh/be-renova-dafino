@@ -97,7 +97,7 @@ export const getAllCars = async (req, res) => {
     const {
       page = 1,
       limit = 12,
-      sort_by = "created_at",
+      sort_by = "createdAt",
       sort_order = "DESC",
       ...filters
     } = req.query;
@@ -367,7 +367,7 @@ export const getFeaturedCars = async (req, res) => {
         },
       ],
       limit: 6,
-      order: [["created_at", "DESC"]],
+      order: [["createdAt", "DESC"]],
     });
 
     res.json({

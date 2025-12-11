@@ -10,6 +10,8 @@ module.exports = {
         {
           id: "11111111-1111-1111-1111-111111111111",
           name: "Admin User",
+          phone: "0812345678",
+          isActive: true,
           email: "admin@example.com",
           password: bcrypt.hashSync("admin123", 10),
           createdAt: new Date(),

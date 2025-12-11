@@ -6,11 +6,12 @@
   "scripts": {
     "dev": "nodemon src/app.js",
     "start": "node src/app.js",
-    "migrate": "npx sequelize-cli db:migrate",
-    "migrate:undo": "npx sequelize-cli db:migrate:undo",
-    "seed": "npx sequelize-cli db:seed:all",
-    "seed:undo": "npx sequelize-cli db:seed:undo:all",
-    "reset": "npm run migrate:undo && npm run migrate && npm run seed"
+    "seed": "npx sequelize-cli db:seed:all --config config/config.cjs",
+    "seed:undo": "npx sequelize-cli db:seed:undo:all --config config/config.cjs",
+    "migrate": "npx sequelize-cli db:migrate --config config/config.cjs",
+    "migrate:undo": "npx sequelize-cli db:migrate:undo:all --config config/config.cjs",
+    "migrate:reset": "npm run migrate:undo && npm run migrate",
+    "db:reset": "npm run migrate:undo && npm run migrate && npm run seed"
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",
@@ -19,7 +20,8 @@
     "express": "^4.18.2",
     "jsonwebtoken": "^9.0.1",
     "mysql2": "^3.9.3",
-    "sequelize": "^6.37.1"
+    "sequelize": "^6.37.1",
+    "uuid": "^13.0.0"
   },
   "devDependencies": {
     "nodemon": "^3.0.2"
