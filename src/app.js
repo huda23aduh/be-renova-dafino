@@ -6,6 +6,7 @@ import cors from "cors";
 import authRoutes from "./routes/auth.routes.js";
 import brandRoutes from "./routes/brand.routes.js";
 import carRoutes from "./routes/car.routes.js";
+import testDriveRoutes from "./routes/testDrive.routes.js";
 import userRoutes from "./routes/user.routes.js";
 
 dotenv.config();
@@ -28,6 +29,7 @@ app.get("/", (req, res) => {
 app.use("/auth", authRoutes);
 app.use("/brands", brandRoutes);
 app.use("/cars", carRoutes);
+app.use("/test-drives", testDriveRoutes);
 app.use("/users", userRoutes);
 
 sequelize.sync({ alter: true }).then(() => {
