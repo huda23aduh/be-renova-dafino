@@ -8,6 +8,7 @@ import brandRoutes from "./routes/brand.routes.js";
 import carRoutes from "./routes/car.routes.js";
 import testDriveRoutes from "./routes/testDrive.routes.js";
 import userRoutes from "./routes/user.routes.js";
+import contactMessageRoutes from "./routes/contactMessage.routes.js";
 
 dotenv.config();
 const app = express();
@@ -31,6 +32,7 @@ app.use("/brands", brandRoutes);
 app.use("/cars", carRoutes);
 app.use("/test-drives", testDriveRoutes);
 app.use("/users", userRoutes);
+app.use("/contact-messages", contactMessageRoutes);
 
 sequelize.sync({ alter: true }).then(() => {
   console.log("📦 Database synced!");
